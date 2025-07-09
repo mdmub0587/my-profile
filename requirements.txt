@@ -1,1 +1,1 @@
-st_lottie
+streamlit_lottie
