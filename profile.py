@@ -2,59 +2,21 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 import requests
 from PIL import Image
+from datetime import datetime
+import json
 
 # --- Page config ---
 st.set_page_config(page_title="Md Mubasir | Profile", page_icon="💼", layout="wide")
 
-# --- Load assets ---
-def load_lottieurl(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+experience = f"{round(((datetime.today() - datetime(2021, 3, 1)).days / 365.25) * 2) / 2} years"
 
-lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_1pxqjqps.json")
+# Read lotti file
+with open('Animation - 1752049917942.json', 'r') as f:
+    lottie_coding = json.load(f)
+
 profile_pic_url = "https://media.licdn.com/dms/image/v2/D4D03AQEUhC9qNHI9cA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1706820835384?e=1757548800&v=beta&t=aqcIetrgACnwbgoINQtz07eTKQnhz-AhKKUsWkEKi-o"  # Replace with actual image URL
 profile_pic = Image.open(requests.get(profile_pic_url, stream=True).raw)
 
-# --- Apply Default Dark Mode Style ---
-# st.markdown(
-#     """
-#     <style>
-#     body, .stApp {
-#         background-color: #0e1117;
-#         color: #FAFAFA;
-#     }
-#     .css-18e3th9 {
-#         background-color: #0e1117;
-#     }
-#     .css-1d391kg, .css-1v3fvcr, .css-1cpxqw2 {
-#         background-color: #262730;
-#     }
-#     [data-testid="stSidebar"] > div:first-child {
-#         background-color: #1e1e1e;
-#         color: #FAFAFA;
-#     }
-#     [data-testid="stSidebar"] label, .stRadio > div > label {
-#         color: #FAFAFA !important;
-#         font-weight: 600;
-#         font-size: 1rem;
-#     }
-#     .stRadio > div > div {
-#         background-color: #333 !important;
-#         border-radius: 0.5rem;
-#         padding: 0.5rem;
-#     }
-#     .stRadio > div > div:hover {
-#         background-color: #444 !important;
-#     }
-#     .stRadio > div > div span, .stRadio > div label span, .stSidebar span {
-#         color: #FAFAFA !important;
-#         font-weight: 600;
-#     }
-#     </style>
-#     """, unsafe_allow_html=True
-# )
 
 # --- Sidebar ---
 st.sidebar.image(profile_pic, width=120)
@@ -70,7 +32,7 @@ section = st.sidebar.radio("Go to", [
 ])
 # --- Header ---
 st.title("👨‍💼 Md Mubasir")
-st.subheader("Senior Software Engineer | Big Data Engineer | AWS Expert")
+st.subheader("Senior Software Engineer | Big Data & AI Solutions Engineer")
 st.write("📍 Kolkata, India | [LinkedIn](https://linkedin.com/in/mdmubasir1998/) | [GitHub](https://github.com/mdmub0587)")
 st.markdown("---")
 
@@ -81,13 +43,18 @@ st.markdown("---")
 if section == "👤 About Me":
     col1, col2 = st.columns(2)
     with col1:
-        st_lottie(lottie_coding, height=300, key="coding")
+        st_lottie(lottie_coding, height=336, key="coding")
     with col2:
         st.header("Hi, I'm Mubasir 👋")
-        st.write("""
-        Highly experienced Big Data Engineer with expertise in designing, building, and optimizing data engineering solutions on AWS. 
-        Skilled in AWS Glue, Apache Airflow, PySpark, and Databricks. Proven track record of building scalable, efficient ETL pipelines.
-        Passionate about leveraging cloud technologies to drive business insights.
+        st.write(f"""
+        Big Data & AI Solutions Engineer with approximately {experience} years of experience across 
+        full-stack development, modern data engineering, and applied AI/ML. Specialized 
+        in designing and implementing cloud-native, scalable ETL pipelines using Databricks, 
+        AWS, Matillion, and PySpark. Proven ability to lead cross-functional teams, build 
+        resilient data platforms, and deliver impactful solutions across domains. Adept at 
+        leveraging GenAI, fine-tuning LLMs, and custom-training models to automate workflows 
+        and accelerate data-driven decision-making. Passionate about innovating at the 
+        intersection of big data systems and machine intelligence.
         """)
 
 elif section == "💼 Experience":
