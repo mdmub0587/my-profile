@@ -14,9 +14,7 @@ experience = f"{round(((datetime.today() - datetime(2021, 3, 1)).days / 365.25) 
 with open('Animation - 1752049917942.json', 'r') as f:
     lottie_coding = json.load(f)
 
-profile_pic_url = "https://media.licdn.com/dms/image/v2/D4D03AQEUhC9qNHI9cA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1706820835384?e=1757548800&v=beta&t=aqcIetrgACnwbgoINQtz07eTKQnhz-AhKKUsWkEKi-o"  # Replace with actual image URL
-profile_pic = Image.open(requests.get(profile_pic_url, stream=True).raw)
-
+profile_pic = 'profile.png'
 
 # --- Sidebar ---
 st.sidebar.image(profile_pic, width=120)
