@@ -5,8 +5,16 @@ from PIL import Image
 from datetime import datetime
 import json
 
+# --- Helper function to load content ---
+def load_content():
+    with open("profile_content.json", "r") as f:
+        return json.load(f)
+
+# -- Load content ---
+content = load_content()
+
 # --- Page config ---
-st.set_page_config(page_title="Md Mubasir | Profile", page_icon="💼", layout="wide")
+st.set_page_config(page_title=content["page"]["title"], page_icon=content["page"]["icon"], layout="wide")
 
 experience = f"{round(((datetime.today() - datetime(2021, 3, 1)).days / 365.25) * 2) / 2} years"
 
@@ -14,10 +22,8 @@ experience = f"{round(((datetime.today() - datetime(2021, 3, 1)).days / 365.25) 
 with open('Live chatbot.json', 'r') as f:
     lottie_coding = json.load(f)
 
-profile_pic = 'profile.png'
-
 # --- Sidebar ---
-st.sidebar.image(profile_pic, width=120)
+st.sidebar.image(content['about']['profile_pic'], width=120)
 st.sidebar.title("Navigation")
 section = st.sidebar.radio("Go to", [
     "👤 About Me",
@@ -29,13 +35,10 @@ section = st.sidebar.radio("Go to", [
     "📫 Contact"
 ])
 # --- Header ---
-st.title("👨‍💼 Md Mubasir")
-st.subheader("Senior Software Engineer | Big Data & AI Solutions Engineer")
-st.write("📍 Kolkata, India | [LinkedIn](https://linkedin.com/in/mdmubasir1998/) | [GitHub](https://github.com/mdmub0587)")
+st.title(content["header"]["name"])
+st.subheader(content["header"]["title"])
+st.write(f"{content['header']['location']} | [LinkedIn]({content['header']['linkedin']}) | [GitHub]({content['header']['github']})")
 st.markdown("---")
-
-# with open("resume.pdf", "rb") as file:
-#     st.download_button(label="📄 Download Resume", data=file, file_name="Md_Mubasir_Resume.pdf", mime="application/pdf")
 
 # --- Content Sections ---
 if section == "👤 About Me":
@@ -211,7 +214,7 @@ elif section == "🎓 Education":
 
         <div class="edu-card">
             <img src='https://cdn-icons-png.flaticon.com/512/1822/1822926.png' width='60'>
-            <h4>Md Islamia High School</h4>
+            <h4>Islamia High School</h4>
             <p><b>10 (Secondary), Science</b></p>
             <p>📅 <span class="edu-badge">2010 – 2015</span> &nbsp;&nbsp; 🏆 <b>Grade:</b> <span class="edu-badge">A+</span> &nbsp;&nbsp; 🧮 <b>Score:</b> <span class="edu-badge">83%</span></p>
         </div>

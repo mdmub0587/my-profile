@@ -1,0 +1,126 @@
+{
+  "page": {
+    "title": "Md Mubasir | Profile",
+    "icon": "💼"
+  },
+  "header": {
+    "name": "👨‍💼 Md Mubasir",
+    "title": "Senior Software Engineer | Big Data & AI Solutions Engineer",
+    "location": "📍 Kolkata, India",
+    "linkedin": "https://linkedin.com/in/mdmubasir1998/",
+    "github": "https://github.com/mdmub0587"
+  },
+  "about": {
+    "profile_pic":"profile.png",
+    "greeting": "Hi, I'm Mubasir 👋",
+    "summary": "Big Data & AI Solutions Engineer with approximately {experience} years of experience across full-stack development, modern data engineering, and applied AI/ML. Specialized in designing and implementing cloud-native, scalable ETL pipelines using Databricks, AWS, Matillion, and PySpark. Proven ability to lead cross-functional teams, build resilient data platforms, and deliver impactful solutions across domains. Adept at leveraging GenAI, fine-tuning LLMs, and custom-training models to automate workflows and accelerate data-driven decision-making. Passionate about innovating at the intersection of big data systems and machine intelligence."
+  },
+  "experience": [
+    {
+      "role": "Senior Software Engineer",
+      "company": "Tiger Analytics",
+      "date": "📅 Mar 2024 – Present | 🏢 Hybrid",
+      "details": [
+        "Designed and developed scalable Big Data ETL pipelines with end-to-end orchestration and data quality checks using Databricks, Matillion, and Collibra.",
+        "Created optimized Delta tables in Databricks using AWS S3 sources, and implemented advanced SQL and PySpark logic for performance tuning.",
+        "Integrated AWS services like S3, SNS, Step Functions, and Redshift to create modular, resilient data workflows."
+      ]
+    },
+    {
+      "role": "Consultant - Application Developer",
+      "company": "Thoughtworks",
+      "date": "📅 Jun 2022 – Mar 2024 | 🏠 Remote",
+      "details": [
+        "Built scalable ETL pipelines using AWS Glue, S3, and DynamoDB.",
+        "Implemented alerting systems with Amazon SNS for pipeline health monitoring.",
+        "Wrote optimized Presto SQL queries for business-critical insights and reporting."
+      ]
+    },
+    {
+      "role": "Graduate Consultant - Application Developer",
+      "company": "Thoughtworks",
+      "date": "📅 Jun 2021 – Jun 2022",
+      "details": [
+        "Engineered an AWS-powered Data Lake with Glue, Lambda, and Lake Formation.",
+        "Integrated Athena with Power BI for real-time analytics dashboards."
+      ]
+    },
+    {
+      "role": "Intern - Application Developer",
+      "company": "Thoughtworks",
+      "date": "📅 Mar 2021 – Jun 2021",
+      "details": [
+        "Developed scalable ETL pipelines using Airflow, Scala Spark, and Docker.",
+        "Executed distributed data processing on AWS EMR for large-scale ingestion."
+      ]
+    }
+  ],
+  "skills": {
+    "Languages & Tools": {
+      "Python, PySpark, SQL": 95,
+      ".NET 6, Scala, JavaScript, TypeScript, GraphQL": 75,
+      "TensorFlow, Sklearn, Pandas, Numpy": 80
+    },
+    "Cloud & Big Data": {
+      "AWS Suite (Glue, S3, Lambda, etc.)": 90,
+      "Databricks, Apache Airflow": 85
+    },
+    "ETL & Data Tools": {
+      "Matillion, Collibra, Spark, Delta Live Tables": 80
+    },
+    "AI/ML & GenAI": {
+      "GenAI, Model Training/Deployment": 75
+    },
+    "Frontend & Other": {
+      "React, Power BI": 70,
+      "Git, CI/CD, Data Lake, Agile": 85
+    }
+  },
+  "projects": [
+    {
+      "title": "Oil Storage Tank’s Volume Occupancy",
+      "description": "YOLOv3-based detection model on satellite images to estimate oil tank volume.",
+      "link": "https://github.com/mdmub0587/Oil-Storage-Tank-s-Volume-Occupancy"
+    },
+    {
+      "title": "Don’t Overfit! II",
+      "description": "Kaggle competition with 250 rows, achieved top 5% using RFE + Logistic Regression.",
+      "link": "https://github.com/mdmub0587/Dont-Overfit-II"
+    }
+  ],
+  "education": [
+    {
+      "school": "Techno Main - Salt Lake",
+      "degree": "B.Tech in Computer Science & Engineering",
+      "date": "📅 2017 – 2021",
+      "grade": "8.78 / 10",
+      "logo": "http://cse.ticollege.org/img/tmsl-logo.png"
+    },
+    {
+      "school": "Md Jan High School",
+      "degree": "10+2 (Higher Secondary), Science",
+      "date": "📅 2015 – 2017",
+      "grade": "A+",
+      "score": "86%",
+      "logo": "https://cdn-icons-png.flaticon.com/512/1822/1822926.png"
+    },
+    {
+      "school": "Islamia High School",
+      "degree": "10 (Secondary), Science",
+      "date": "📅 2010 – 2015",
+      "grade": "A+",
+      "score": "83%",
+      "logo": "https://cdn-icons-png.flaticon.com/512/1822/1822926.png"
+    }
+  ],
+  "certifications": [
+    "Applied Machine Learning – Applied AI Course (Oct 2020)",
+    "Applied Deep Learning Capstone – edX (Jun 2020)"
+  ],
+  "contact": {
+    "email": "talk2mubasir0587@gmail.com",
+    "linkedin": "https://linkedin.com/in/mdmubasir1998",
+    "github": "https://github.com/mdmub0587"
+  },
+  "footer": "Made with ❤️ in Streamlit | © 2025 Md Mubasir"
+}
