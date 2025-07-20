@@ -11,7 +11,7 @@ st.set_page_config(page_title="Md Mubasir | Profile", page_icon="💼", layout="
 experience = f"{round(((datetime.today() - datetime(2021, 3, 1)).days / 365.25) * 2) / 2} years"
 
 # Read lotti file
-with open('Animation - 1752049917942.json', 'r') as f:
+with open('Live chatbot.json', 'r') as f:
     lottie_coding = json.load(f)
 
 profile_pic = 'profile.png'
